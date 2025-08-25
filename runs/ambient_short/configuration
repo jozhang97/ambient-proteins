@@ -1,0 +1,22 @@
+name ambient_short
+
+seed 100
+
+numPairTransformLayers 8
+warmupEpoches 5
+numEpoches 200
+motifProbability 1.0
+logEverySteps 1000
+checkpointEveryEpoches 1
+
+batchSize 8
+accumGrad 2
+learningRate 10e-4
+
+ambient True
+min_plddt 70
+t_nature 300
+plddt_to_timestep ((90,-50),(80,300),(70,900))
+dt_buffer 50
+dataDirectory /scratch/07861/jozhang/datasets/afdb_tm40
+always_ambient_for_high_noises True
